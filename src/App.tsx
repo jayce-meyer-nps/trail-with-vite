@@ -72,36 +72,23 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        {/* <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button> */}
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <p className="header-text">NPMapTrail with Vite</p>
       <div className="map-container">
-      <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+        <div className="left-side">
+          <div style={{display: 'flex', flexDirection: 'row'}}>
+            <img src={viteLogo} className="logo" alt="Vite logo" />
+            <img src={reactLogo} className="logo react" alt="React logo" />
+          </div>
           <button onClick={() => manuallyShowFeature(mockFeature)} style={{padding: '20px', marginRight: '10px'}}>Example of manually showing popup of feature</button>
-          
-          <NPMapTrail 
-            trailDataUrl={'https://svcdev.nps.gov/data/api/v1/sites/6b89dc08-26eb-4a2a-b229-11ca4b8e46e4?apikey=KXuXrDdge2Csv0xbC01JhhNNaDGcmICX&format=geojson&select=relatedsites,images,icon,geometry,id,description,trailinfo,amenities'}
-            featurePopupToShow={featureToShow} // Optional - Use to show a map popup for a feature (if contained in the data from trailDataUrl)
-            elementClicked={handleElementClicked} // Optional. Use to capture a clicked map feature
-          />
         </div>
+        
+        <NPMapTrail 
+          trailDataUrl={'https://svcdev.nps.gov/data/api/v1/sites/6b89dc08-26eb-4a2a-b229-11ca4b8e46e4?apikey=KXuXrDdge2Csv0xbC01JhhNNaDGcmICX&format=geojson&select=relatedsites,images,icon,geometry,id,description,trailinfo,amenities'}
+          featurePopupToShow={featureToShow} // Optional - Use to show a map popup for a feature (if contained in the data from trailDataUrl)
+          elementClicked={handleElementClicked} // Optional. Use to capture a clicked map feature
+          mapCssHeight={'100%'} // Optional, defaults to 98vh - if the parent element of the map uses "%" for height, then this cannot be a "%" value
+          mapCssWidth={'100%'}  // Optional, defaults to 100%
+        />
       </div>
     </>
   )
