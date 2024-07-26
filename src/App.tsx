@@ -77,7 +77,7 @@ function App() {
         <div className="left-side">
           <div style={{display: 'flex', flexDirection: 'row'}}>
             <img src={viteLogo} className="logo" alt="Vite logo" />
-            <img src={reactLogo} className="logo react" alt="React logo" />
+            {/* <img src={reactLogo} className="logo react" alt="React logo" /> */}
           </div>
           <button onClick={() => manuallyShowFeature(mockFeature)} style={{padding: '20px', marginRight: '10px'}}>Example of manually showing popup of feature</button>
         </div>
