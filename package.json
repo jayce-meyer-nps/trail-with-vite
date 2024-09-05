@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@npmap/trail": "^0.0.1-x",
+    "@npmap/trail": "^0.0.2-e",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
