@@ -27,7 +27,7 @@ function App() {
     <>
       <p className="header-text">NPMapTrail with Vite</p>
       <div className="map-container">
-        <div className="left-side">
+        <div className="left-side" style={{marginRight: '10px'}}>
           <div style={{display: 'flex', flexDirection: 'row'}}>
             <img src={viteLogo} className="logo" alt="Vite logo" />
             {/* <img src={reactLogo} className="logo react" alt="React logo" /> */}
