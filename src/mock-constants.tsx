@@ -1,3 +1,5 @@
+// import { ElevationProfileOptions } from "@npmap/elevation-profile";
+
 export const MOCK_OAK_FLAT_TRAIL_GEOMETRY_WITH_ELEVATION: any = `{
     "type": "LineString",
     "coordinates": [
@@ -1865,6 +1867,7 @@ export const CUSTOM_ELEVATION_PROFILE_OPTIONS: any = {
     chartHeight: '50%',
     chartBackgroundColor: '#d4d4d4de',
     displayChartTitle: true,
+    displayMetadata: true,
     chartTitleText: 'Elevation Profile for Selected Trail',
     chartTitleColor: 'darkgreen',
     chartTitlePosition: 'right',

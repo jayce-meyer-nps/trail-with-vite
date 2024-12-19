@@ -8,6 +8,7 @@ import {
     MOCK_OAK_FLAT_TRAIL_ALERT_DATA,
     MOCK_OAK_FLAT_TRAIL_DATA_WITH_ELEVATION, 
 } from './mock-constants'
+import NPElevationProfile from '@npmap/elevation-profile'
 
 function App() {
   const [featureToShow, setFeatureToShow] = useState(null)
@@ -32,6 +33,12 @@ function App() {
             {/* <img src={reactLogo} className="logo react" alt="React logo" /> */}
           </div>
           <button onClick={() => manuallyShowFeature(MOCK_FEATURE_S_RIM_VISITOR_CENTER)} style={{padding: '20px', marginRight: '10px'}}>Example of manually showing popup of feature</button>
+          <div id='test' style={{backgroundColor: 'white', color: 'black'}}>
+            <NPElevationProfile 
+              dataUrl={MOCK_OAK_FLAT_TRAIL_DATA_WITH_ELEVATION}
+              elevationProfileOptions={CUSTOM_ELEVATION_PROFILE_OPTIONS}
+            />
+          </div>
         </div>
         
         <NPMapTrail 
