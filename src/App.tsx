@@ -33,10 +33,18 @@ function App() {
             {/* <img src={reactLogo} className="logo react" alt="React logo" /> */}
           </div>
           <button onClick={() => manuallyShowFeature(MOCK_FEATURE_S_RIM_VISITOR_CENTER)} style={{padding: '20px', marginRight: '10px'}}>Example of manually showing popup of feature</button>
-          <div id='test' style={{backgroundColor: 'white', color: 'black'}}>
+          <div id='test' style={{backgroundColor: 'white'}}>
             <NPElevationProfile 
+              // dataUrl={'https://svcdev.nps.gov/data/api/v1/sites?apikey=KXuXrDdge2Csv0xbC01JhhNNaDGcmICX&format=geojson&type=trail&select=relatedsites,icon,geometry,id,description,trailinfo,amenities,images&id=d0e3dc08-9a33-ea37-8c00-4d4cf9fa7d4c'}
               dataUrl={MOCK_OAK_FLAT_TRAIL_DATA_WITH_ELEVATION}
-              elevationProfileOptions={CUSTOM_ELEVATION_PROFILE_OPTIONS}
+              elevationProfileOptions={{
+                displayMetadata: true, 
+                chartTitleText: 'Elevation Details',
+                chartTitlePosition: 'top',
+                chartTitleAlignment: 'start',
+                chartTitlePadding: {bottom: '20'}
+              }}
+              // elevationProfileOptions={CUSTOM_ELEVATION_PROFILE_OPTIONS}
             />
           </div>
         </div>
