@@ -42,9 +42,18 @@ function App() {
                 chartTitleText: 'Elevation Details',
                 chartTitlePosition: 'top',
                 chartTitleAlignment: 'start',
-                chartTitlePadding: {bottom: '20'}
+                chartTitlePadding: {bottom: '20'},
+                profileLineColor: 'darkgreen',
+                belowProfileLineColor: '#ccc6',
+                displayTooltip: true,
+                tooltipTextColor: '#fff',
+                tooltipBackgroundColor: '#000',
+                displayTooltipDistance: false,
+                displayTooltipElevation: true,
+                displayTooltipDPlus: false,
+                displayTooltipGrade: false,
+                crosshairLineColor: 'black',
               }}
-              // elevationProfileOptions={CUSTOM_ELEVATION_PROFILE_OPTIONS}
             />
           </div>
         </div>
