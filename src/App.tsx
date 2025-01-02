@@ -43,6 +43,7 @@ function App() {
                 chartTitlePosition: 'top',
                 chartTitleAlignment: 'start',
                 chartTitlePadding: {bottom: '20'},
+                // metadataItemsPerRow: 3,
                 profileLineColor: 'darkgreen',
                 belowProfileLineColor: '#ccc6',
                 displayTooltip: true,
